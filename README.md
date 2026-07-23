@@ -76,6 +76,70 @@ The pipeline applies cleaning and validation rules such as:
 
 A desktop interface allows users to inspect extracted records, correct values, apply validations and generate the final structured output.
 
+## Application preview
+
+The screenshots below use sanitized or demonstration content. Personal information, client names, local paths and production outputs were removed, hidden or replaced before publication.
+
+### Main desktop interface
+
+The application provides a desktop workflow for selecting document folders, launching batch processing and monitoring execution.
+
+![Main interface](assets/screenshots/01-main-interface.png)
+
+### Input and output folder selection
+
+Users define the source folder containing PDF or image forms and the destination folder for generated results.
+
+![Folder selection](assets/screenshots/02-folder-selection.png)
+
+### Processing log and progress tracking
+
+The interface reports each processing stage, document status, generated records and execution progress.
+
+![Processing log](assets/screenshots/03-processing-log.png)
+
+### Processed data preview
+
+Extracted records are transformed into a structured table so users can review fields before generating the final output.
+
+![Processed data preview](assets/screenshots/04-processed-data-preview.png)
+
+### Business-rule validation
+
+The review interface exposes validation findings and supports the human-in-the-loop correction of records that require attention.
+
+![Business rule validation](assets/screenshots/05-business-rule-validation.png)
+
+### Export for manual review
+
+Users can export the structured DataFrame to Excel or CSV for additional inspection, traceability or operational review.
+
+![Export review data](assets/screenshots/06-export-review-data.png)
+
+### Final flat-file output
+
+Validated data can be converted into a configured flat-file structure for downstream systems.
+
+![Final flat-file output](assets/screenshots/07-final-flat-file-output.png)
+
+### Loading externally reviewed data
+
+The application can load a previously exported file and continue the validation or output-generation workflow.
+
+![Load external data](assets/screenshots/08-load-external-data.png)
+
+### Final-output generation
+
+The interface includes a dedicated action for generating the final structured deliverable after review and validation.
+
+![Generate final output](assets/screenshots/09-generate-final-output.png)
+
+### Demonstration form
+
+A sanitized demonstration form illustrates the type of structured document processed by the private implementation.
+
+![Sample credit form](assets/screenshots/10-sample-credit-form.png)
+
 ## Technology stack
 
 Python, Amazon Textract, boto3, pandas, NumPy, OpenCV, Pillow, pdf2image, Poppler, openpyxl, python-dotenv, Tkinter and ttkbootstrap.
@@ -86,6 +150,8 @@ Python, Amazon Textract, boto3, pandas, NumPy, OpenCV, Pillow, pdf2image, Popple
 docs/                       Architecture and portfolio documentation
 assets/screenshots/         Sanitized application screenshots
 sample_data/                Synthetic-data guidance only
+src/intelligent_form_extractor/
+                            Selected reusable public components
 .env.example                Safe configuration template
 .gitignore                  Protection for credentials and operational data
 requirements.txt            Minimal public dependency list
@@ -101,10 +167,6 @@ requirements.txt            Minimal public dependency list
 - [`Security and privacy`](docs/security.md)
 - [`Current limitations`](docs/limitations.md)
 - [`Roadmap`](docs/roadmap.md)
-
-## Application preview
-
-Sanitized screenshots will be added to `assets/screenshots/`. Real forms, personal information, internal paths and production outputs will not be published.
 
 ## Security and privacy
 
